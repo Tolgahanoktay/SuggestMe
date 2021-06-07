@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="preloaded_fonts" translatable="false">
+        <item>@font/abhaya_libre_semibold</item>
+        <item>@font/arya_bold</item>
+        <item>@font/bungee_inline</item>
+        <item>@font/bungee_shade</item>
+        <item>@font/candal</item>
+        <item>@font/days_one</item>
+        <item>@font/space_mono_bold</item>
+        <item>@font/stoke</item>
+        <item>@font/vidaloka</item>
+        <item>@font/viga</item>
+        <item>@font/wendy_one</item>
+    </array>
+</resources>

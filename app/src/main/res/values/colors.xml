@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#DEDEDE</color>
+    <color name="colorPrimaryDark">#141414</color>
+    <color name="colorAccent">#03DAC5</color>
+    <color name="sliderOffline">#2A2728</color>
+    <color name="sliderOnline">#FFC321</color>
+    <color name="spinner">#E5B00B</color>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="red">#990012</color>
+
+</resources>

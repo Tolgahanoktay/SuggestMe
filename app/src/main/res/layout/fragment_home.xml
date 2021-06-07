@@ -1,0 +1,535 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#141414">
+
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_marginTop="2dp"
+            android:layout_marginBottom="10dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="4"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="5dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <ImageView
+                        android:layout_width="130dp"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="7dp"
+                        android:src="@drawable/suggest_me"/>
+
+                </LinearLayout>
+
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="-20dp"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:id="@+id/textView_tvShows"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:autoSizeMaxTextSize="25dp"
+                        android:autoSizeMinTextSize="20dp"
+                        android:autoSizeTextType="none"
+                        android:fontFamily="@font/viga"
+                        android:gravity="center_vertical|center_horizontal"
+                        android:text="Tv Shows"
+                        android:textColor="#fff" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="-20dp"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:id="@+id/textView_movies"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="Movies"
+                        android:textColor="#fff"
+                        android:fontFamily="@font/viga"
+                        android:autoSizeTextType="none"
+                        android:autoSizeMinTextSize="20dp"
+                        android:autoSizeMaxTextSize="25dp"
+                        android:gravity="center_vertical|center_horizontal" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="-20dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:id="@+id/textView_myListFragment"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="My List"
+                        android:fontFamily="@font/viga"
+                        android:textColor="#fff"
+                        android:autoSizeTextType="none"
+                        android:autoSizeMinTextSize="20dp"
+                        android:autoSizeMaxTextSize="25dp"
+                        android:gravity="center_vertical|center_horizontal" />
+
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="540dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <androidx.viewpager.widget.ViewPager
+                        android:id="@+id/view_pager"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"/>
+
+                    <LinearLayout
+                        android:id="@+id/slider_dots"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_centerHorizontal="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginBottom="5dp"/>
+
+
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/recyclerViews"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_marginTop="25dp"
+                android:layout_marginBottom="25dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/textView_popular"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginBottom="7dp"
+                        android:autoSizeMaxTextSize="20dp"
+                        android:autoSizeMinTextSize="18dp"
+                        android:autoSizeTextType="uniform"
+                        android:fontFamily="@font/vidaloka"
+                        android:gravity="left"
+                        android:text="Popular in Suggest Me"
+                        android:textColor="#fff" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/recyclerViews_popular"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/textView_mostClick"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginBottom="7dp"
+                        android:autoSizeMaxTextSize="20dp"
+                        android:autoSizeMinTextSize="18dp"
+                        android:autoSizeTextType="uniform"
+                        android:fontFamily="@font/vidaloka"
+                        android:gravity="left"
+                        android:text="Most Clicked"
+                        android:textColor="#fff" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/recyclerViews_mostClicks"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/textView_seeTvShows"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginBottom="7dp"
+                        android:autoSizeMaxTextSize="20dp"
+                        android:autoSizeMinTextSize="18dp"
+                        android:autoSizeTextType="uniform"
+                        android:fontFamily="@font/vidaloka"
+                        android:gravity="left"
+                        android:text="Newest"
+                        android:textColor="#fff" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/recyclerViews_newest"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/textView_tensionAndfear"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginBottom="7dp"
+                        android:autoSizeMaxTextSize="20dp"
+                        android:autoSizeMinTextSize="18dp"
+                        android:autoSizeTextType="uniform"
+                        android:fontFamily="@font/vidaloka"
+                        android:gravity="left"
+                        android:text="Tension And Fear"
+                        android:textColor="#fff" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/recyclerViews_tensionAndfear"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+                </LinearLayout>
+
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/textView_action_adventure"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginBottom="7dp"
+                        android:autoSizeMaxTextSize="20dp"
+                        android:autoSizeMinTextSize="18dp"
+                        android:autoSizeTextType="uniform"
+                        android:fontFamily="@font/vidaloka"
+                        android:gravity="left"
+                        android:text="Action And Adventure"
+                        android:textColor="#fff" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/recyclerViews_action_adventure"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/textView_scienceFiction"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginBottom="7dp"
+                        android:autoSizeMaxTextSize="20dp"
+                        android:autoSizeMinTextSize="18dp"
+                        android:autoSizeTextType="uniform"
+                        android:fontFamily="@font/vidaloka"
+                        android:gravity="left"
+                        android:text="Science Fiction"
+                        android:textColor="#fff" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/recyclerViews_scienceFiction"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/textView_seeMovies"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginBottom="7dp"
+                        android:autoSizeMaxTextSize="20dp"
+                        android:autoSizeMinTextSize="18dp"
+                        android:autoSizeTextType="uniform"
+                        android:fontFamily="@font/vidaloka"
+                        android:gravity="left"
+                        android:text="Movies "
+                        android:textColor="#fff" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/recyclerViews_seeMovies"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/textView_tvShowsContent"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginBottom="7dp"
+                        android:autoSizeMaxTextSize="20dp"
+                        android:autoSizeMinTextSize="18dp"
+                        android:autoSizeTextType="uniform"
+                        android:fontFamily="@font/vidaloka"
+                        android:gravity="left"
+                        android:text="Tv Shows"
+                        android:textColor="#fff" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/recyclerViews_tvShows"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+                </LinearLayout>
+
+
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/textView_realStory"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginBottom="7dp"
+                        android:autoSizeMaxTextSize="20dp"
+                        android:autoSizeMinTextSize="18dp"
+                        android:autoSizeTextType="uniform"
+                        android:fontFamily="@font/vidaloka"
+                        android:gravity="left"
+                        android:text="Real Stories"
+                        android:textColor="#fff" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/recyclerViews_realStory"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/textView_drama"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginBottom="7dp"
+                        android:autoSizeMaxTextSize="20dp"
+                        android:autoSizeMinTextSize="18dp"
+                        android:autoSizeTextType="uniform"
+                        android:fontFamily="@font/vidaloka"
+                        android:gravity="left"
+                        android:text="Drama"
+                        android:textColor="#fff" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/recyclerViews_drama"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/textView_highScore"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginBottom="7dp"
+                        android:autoSizeMaxTextSize="20dp"
+                        android:autoSizeMinTextSize="18dp"
+                        android:autoSizeTextType="uniform"
+                        android:fontFamily="@font/vidaloka"
+                        android:gravity="left"
+                        android:text="High Scorers"
+                        android:textColor="#fff" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/recyclerViews_highScore"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/textView_changeableOne"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginBottom="7dp"
+                        android:autoSizeMaxTextSize="20dp"
+                        android:autoSizeMinTextSize="18dp"
+                        android:autoSizeTextType="uniform"
+                        android:fontFamily="@font/vidaloka"
+                        android:gravity="left"
+                        android:textColor="#fff" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/recyclerViews_changeableOne"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/textView_changeableTwo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginBottom="7dp"
+                        android:autoSizeMaxTextSize="20dp"
+                        android:autoSizeMinTextSize="18dp"
+                        android:autoSizeTextType="uniform"
+                        android:fontFamily="@font/vidaloka"
+                        android:gravity="left"
+                        android:textColor="#fff" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/recyclerViews_changeableTwo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/textView_changeableThree"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginBottom="7dp"
+                        android:autoSizeMaxTextSize="20dp"
+                        android:autoSizeMinTextSize="18dp"
+                        android:autoSizeTextType="uniform"
+                        android:fontFamily="@font/vidaloka"
+                        android:gravity="left"
+                        android:textColor="#fff" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/recyclerViews_changeableThree"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+                </LinearLayout>
+
+
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+
+</LinearLayout>

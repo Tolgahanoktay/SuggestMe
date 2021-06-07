@@ -1,0 +1,484 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DetailActivity"
+    android:orientation="vertical"
+    android:background="#141414">
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        
+        <com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView
+            android:id="@+id/youtube_trailer"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            app:autoPlay="false"
+            app:showYouTubeButton="true"
+            app:showFullScreenButton="true"
+            app:handleNetworkEvents="true">
+
+
+            <ImageView
+                android:id="@+id/image_back_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="15dp"
+                android:src="@drawable/ic_back"/>
+
+
+            <ImageView
+                android:id="@+id/image_add_favorie"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="30dp"
+                android:src="@drawable/ic_favorite_heart"/>
+
+        </com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView>
+
+        <ImageView
+            android:layout_marginTop="15dp"
+            android:id="@+id/imageView_newsImage"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:visibility="gone"/>
+
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView_name_newsDetail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:autoSizeMaxTextSize="25dp"
+                android:autoSizeMinTextSize="20dp"
+                android:autoSizeTextType="uniform"
+                android:gravity="left"
+                android:textColor="#fff"
+                android:textStyle="bold"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginBottom="4dp"
+                android:visibility="gone"/>
+
+            <LinearLayout
+                android:id="@+id/linear_detailAboutContent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="2"
+                android:layout_marginTop="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="10dp">
+
+                    <ImageView
+                        android:id="@+id/movie_image_detail"
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:id="@+id/movie_name_detail"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:autoSizeMaxTextSize="25dp"
+                                android:autoSizeMinTextSize="20dp"
+                                android:autoSizeTextType="uniform"
+                                android:gravity="left"
+                                android:textColor="#fff"
+                                android:layout_marginLeft="3dp"/>
+
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:layout_marginVertical="5dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginLeft="5dp">
+
+                            <ImageView
+                                android:id="@+id/image_starRating_detail"
+                                android:layout_width="18dp"
+                                android:layout_height="18dp"
+                                android:layout_gravity="right"
+                                android:src="@drawable/icons8_star_20px_3"/>
+
+
+                            <TextView
+                                android:id="@+id/movie_rating_detail"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:autoSizeMaxTextSize="15dp"
+                                android:autoSizeMinTextSize="13dp"
+                                android:autoSizeTextType="uniform"
+                                android:gravity="center"
+                                android:textColor="#fff"
+                                android:layout_marginLeft="3dp"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginLeft="5dp">
+
+                            <ImageView
+                                android:id="@+id/image_netflix"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/icons8_netflix_45px" />
+
+                            <ImageView
+                                android:id="@+id/image_amazon"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/icons8_amazon_45px"
+                                android:layout_marginLeft="5dp"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginLeft="7dp">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Category : "
+                                    android:textColor="#fff"
+                                    android:autoSizeTextType="none"
+                                    android:autoSizeMinTextSize="12dp"
+                                    android:autoSizeMaxTextSize="15dp"/>
+                            </LinearLayout>
+
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:id="@+id/movie_genre_detail"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="#fff"
+                                    android:autoSizeTextType="none"
+                                    android:autoSizeMinTextSize="12dp"
+                                    android:autoSizeMaxTextSize="15dp"/>
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginLeft="7dp">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Year : "
+                                android:textColor="#fff"
+                                android:autoSizeTextType="none"
+                                android:autoSizeMinTextSize="12dp"
+                                android:autoSizeMaxTextSize="15dp"/>
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:id="@+id/movie_year_detail"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="#fff"
+                                android:autoSizeTextType="none"
+                                android:autoSizeMinTextSize="12dp"
+                                android:autoSizeMaxTextSize="15dp"/>
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginLeft="7dp"
+                            android:layout_marginBottom="2dp">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:id="@+id/textView_detail_Director"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Director : "
+                                    android:textColor="#fff"
+                                    android:autoSizeTextType="none"
+                                    android:autoSizeMinTextSize="12dp"
+                                    android:autoSizeMaxTextSize="15dp"/>
+                            </LinearLayout>
+
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:id="@+id/textView_Director"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="#fff"
+                                    android:autoSizeTextType="none"
+                                    android:autoSizeMinTextSize="12dp"
+                                    android:autoSizeMaxTextSize="15dp"/>
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal"
+                            android:weightSum="3"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginBottom="5dp">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="bottom">
+
+                                <ImageView
+                                    android:id="@+id/image_view_count"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:src="@drawable/ic_views"/>
+
+                                <TextView
+                                    android:id="@+id/text_views_count"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginLeft="3dp"
+                                    android:autoSizeMaxTextSize="15dp"
+                                    android:autoSizeMinTextSize="13dp"
+                                    android:autoSizeTextType="uniform"
+                                    android:gravity="left"
+                                    android:textColor="#fff" />
+
+
+                            </LinearLayout>
+
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="bottom"
+                                android:layout_marginLeft="5dp">
+
+                                <ImageView
+                                    android:id="@+id/image_added_list"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:src="@drawable/ic_favorite_added_list"/>
+
+                                <TextView
+                                    android:id="@+id/text_added_list_count"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:autoSizeMaxTextSize="15dp"
+                                    android:autoSizeMinTextSize="13dp"
+                                    android:autoSizeTextType="uniform"
+                                    android:gravity="left"
+                                    android:textColor="#fff"
+                                    android:layout_marginLeft="3dp"/>
+
+
+                            </LinearLayout>
+
+
+
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="bottom"
+                                android:layout_marginLeft="5dp">
+
+                                <ImageView
+                                    android:id="@+id/image_time"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:src="@drawable/ic_time"/>
+
+                                <TextView
+                                    android:id="@+id/text_time"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:autoSizeMaxTextSize="15dp"
+                                    android:autoSizeMinTextSize="13dp"
+                                    android:autoSizeTextType="uniform"
+                                    android:gravity="left"
+                                    android:textColor="#fff"
+                                    android:layout_marginLeft="3dp"/>
+
+
+                            </LinearLayout>
+
+
+
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="15dp"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/textView_storyArea"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:autoSizeMaxTextSize="20dp"
+                        android:autoSizeMinTextSize="17dp"
+                        android:autoSizeTextType="uniform"
+                        android:gravity="center"
+                        android:textColor="#fff"
+                        android:layout_marginHorizontal="10dp"/>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+
+            <LinearLayout
+                android:id="@+id/linearActor"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="15dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+
+                    <TextView
+                        android:id="@+id/textView_actor_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginBottom="10dp"
+                        android:autoSizeMaxTextSize="23dp"
+                        android:autoSizeMinTextSize="18dp"
+                        android:autoSizeTextType="uniform"
+                        android:fontFamily="@font/arya_bold"
+                        android:text="ACTORS"
+                        android:textColor="#fff" />
+
+                    <Button
+                        android:id="@+id/button_hrTag"
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:layout_marginRight="15dp"
+                        android:layout_marginLeft="5dp"
+                        android:background="@drawable/button_hr"
+                        android:clickable="false"
+                        android:layout_marginBottom="10dp"/>
+
+                </LinearLayout>
+
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerView_actorsPhoto"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+
+            </LinearLayout>
+
+            <!--
+
+            -->
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>
